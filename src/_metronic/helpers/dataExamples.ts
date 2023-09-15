@@ -256,7 +256,6 @@ const defaultAlerts: Array<AlertModel> = [
     state: 'warning',
   },
 ]
-
 export interface LogModel {
   code: string
   state: 'success' | 'danger' | 'warning'

@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {useEffect} from 'react'
-import {Link, Outlet} from 'react-router-dom'
+import {Outlet, Link} from 'react-router-dom'
 import {toAbsoluteUrl} from '../../../_metronic/helpers'
 
 const AuthLayout = () => {
@@ -61,11 +61,7 @@ const AuthLayout = () => {
         <div className='d-flex flex-column flex-center py-15 px-5 px-md-15 w-100'>
           {/* begin::Logo */}
           <Link to='/' className='mb-12'>
-            <img
-              alt='Logo'
-              src={toAbsoluteUrl('/media/l"/media/logos/anadolu-sigorta-logo.svg')}
-              className='h-75px'
-            />
+            <img alt='Logo' src={toAbsoluteUrl('/media/logos/custom-1.png')} className='h-75px' />
           </Link>
           {/* end::Logo */}
 

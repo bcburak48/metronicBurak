@@ -6,10 +6,10 @@
  */
 
 import {FC} from 'react'
-import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom'
+import {Routes, Route, BrowserRouter, Navigate} from 'react-router-dom'
 import {PrivateRoutes} from './PrivateRoutes'
 import {ErrorsPage} from '../modules/errors/ErrorsPage'
-import {AuthPage, Logout, useAuth} from '../modules/auth'
+import {Logout, AuthPage, useAuth} from '../modules/auth'
 import {App} from '../App'
 
 /**

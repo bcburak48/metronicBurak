@@ -65,25 +65,6 @@ class LayoutSetup {
   public static classes: ILayoutCSSClasses = getEmptyCssClasses()
   public static attributes: ILayoutHTMLAttributes = getEmptyHTMLAttributes()
   public static cssVariables: ILayoutCSSVariables = getEmptyCSSVariables()
-  public static bootstrap = (() => {
-    LayoutSetup.updatePartialConfig(LayoutSetup.config)
-  })()
-
-  public static updatePartialConfig(fieldsToUpdate: Partial<ILayout>): ILayout {
-    const config = LayoutSetup.config
-    const updatedConfig = {...config, ...fieldsToUpdate}
-    LayoutSetup.initCSSClasses()
-    LayoutSetup.initCSSVariables()
-    LayoutSetup.initHTMLAttributes()
-    LayoutSetup.isLoaded = false
-    LayoutSetup.config = LayoutSetup.initConfig(Object.assign({}, updatedConfig))
-    LayoutSetup.isLoaded = true // remove loading there
-    return updatedConfig
-  }
-
-  public static setConfig(config: ILayout): void {
-    setLayoutIntoLocalStorage(config)
-  }
 
   private static initCSSClasses(): void {
     LayoutSetup.classes = getEmptyCssClasses()
@@ -207,6 +188,26 @@ class LayoutSetup {
     }
     return {...updatedConfig, app: updatedApp}
   }
+
+  public static updatePartialConfig(fieldsToUpdate: Partial<ILayout>): ILayout {
+    const config = LayoutSetup.config
+    const updatedConfig = {...config, ...fieldsToUpdate}
+    LayoutSetup.initCSSClasses()
+    LayoutSetup.initCSSVariables()
+    LayoutSetup.initHTMLAttributes()
+    LayoutSetup.isLoaded = false
+    LayoutSetup.config = LayoutSetup.initConfig(Object.assign({}, updatedConfig))
+    LayoutSetup.isLoaded = true // remove loading there
+    return updatedConfig
+  }
+
+  public static setConfig(config: ILayout): void {
+    setLayoutIntoLocalStorage(config)
+  }
+
+  public static bootstrap = (() => {
+    LayoutSetup.updatePartialConfig(LayoutSetup.config)
+  })()
 }
 
 export {

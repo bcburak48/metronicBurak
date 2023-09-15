@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useState } from "react";
-import * as Yup from "yup";
-import clsx from "clsx";
-import { Link } from "react-router-dom";
-import { useFormik } from "formik";
-import { getUserByToken, login } from "../core/_requests";
-import { useAuth } from "../core/Auth";
+import {useState} from 'react'
+import * as Yup from 'yup'
+import clsx from 'clsx'
+import {Link} from 'react-router-dom'
+import {useFormik} from 'formik'
+import {getUserByToken, login} from '../core/_requests'
+import {toAbsoluteUrl} from '../../../../_metronic/helpers'
+import {useAuth} from '../core/Auth'
 
 const loginSchema = Yup.object().shape({
   email: Yup.string()
@@ -67,6 +68,51 @@ export function Login() {
         <div className='text-gray-500 fw-semibold fs-6'>Your Social Campaigns</div>
       </div>
       {/* begin::Heading */}
+
+      {/* begin::Login options */}
+      <div className='row g-3 mb-9'>
+        {/* begin::Col */}
+        <div className='col-md-6'>
+          {/* begin::Google link */}
+          <a
+            href='#'
+            className='btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100'
+          >
+            <img
+              alt='Logo'
+              src={toAbsoluteUrl('/media/svg/brand-logos/google-icon.svg')}
+              className='h-15px me-3'
+            />
+            Sign in with Google
+          </a>
+          {/* end::Google link */}
+        </div>
+        {/* end::Col */}
+
+        {/* begin::Col */}
+        <div className='col-md-6'>
+          {/* begin::Google link */}
+          <a
+            href='#'
+            className='btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100'
+          >
+            <img
+              alt='Logo'
+              src={toAbsoluteUrl('/media/svg/brand-logos/apple-black.svg')}
+              className='theme-light-show h-15px me-3'
+            />
+            <img
+              alt='Logo'
+              src={toAbsoluteUrl('/media/svg/brand-logos/apple-black-dark.svg')}
+              className='theme-dark-show h-15px me-3'
+            />
+            Sign in with Apple
+          </a>
+          {/* end::Google link */}
+        </div>
+        {/* end::Col */}
+      </div>
+      {/* end::Login options */}
 
       {/* begin::Separator */}
       <div className='separator separator-content my-14'>

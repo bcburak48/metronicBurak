@@ -1,16 +1,16 @@
-import {createContext, FC, useContext, useEffect, useState} from 'react'
+import {FC, createContext, useContext, useState, useEffect} from 'react'
 import {DefaultConfig} from './_LayoutConfig'
 import {
+  setLayoutIntoLocalStorage,
   getEmptyCssClasses,
   getEmptyCSSVariables,
   getEmptyHTMLAttributes,
   LayoutSetup,
-  setLayoutIntoLocalStorage,
 } from './_LayoutSetup'
 import {
   ILayout,
-  ILayoutCSSClasses,
   ILayoutCSSVariables,
+  ILayoutCSSClasses,
   ILayoutHTMLAttributes,
   LayoutType,
   ToolbarType,

@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { toAbsoluteUrl } from "../../../../helpers";
+import {Link} from 'react-router-dom'
+import {toAbsoluteUrl} from '../../../../helpers'
 
 type Props = {
   className: string
@@ -17,13 +18,25 @@ const EngageWidget10 = ({className}: Props) => (
       <div className='mb-10'>
         <div className='fs-2hx fw-bold text-gray-800 text-center mb-13'>
           <span className='me-2'>
-            Welcome
+            Try our all new Enviroment with
             <br />
             <span className='position-relative d-inline-block text-danger'>
-              New ART Project
+              <Link
+                to='/crafted/pages/profile/overview'
+                className='text-danger
+              opacity-75-hover'
+              >
+                Pro Plan
+              </Link>
+
               <span className='position-absolute opacity-15 bottom-0 start-0 border-4 border-danger border-bottom w-100'></span>
             </span>
           </span>
+          for Free
+        </div>
+
+        <div className='text-center'>
+          <a href='#'>Upgrade Now</a>
         </div>
       </div>
       <img

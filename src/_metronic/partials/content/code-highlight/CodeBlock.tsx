@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import {CopyToClipboard} from 'react-copy-to-clipboard'
 import {Highlight} from 'prism-react-renderer'
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'

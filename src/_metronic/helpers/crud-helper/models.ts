@@ -56,11 +56,7 @@ export type QueryResponseContextProps<T> = {
   query: string
 }
 
-export const initialQueryResponse = {
-  refetch: () => {},
-  isLoading: false,
-  query: '',
-}
+export const initialQueryResponse = {refetch: () => {}, isLoading: false, query: ''}
 
 export type ListViewContextProps = {
   selected: Array<ID>

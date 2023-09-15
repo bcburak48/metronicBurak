@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import { KTIcon } from "../../../helpers";
+import React from 'react'
+import {KTIcon} from '../../../helpers'
 
 type Props = {
   className: string

@@ -1,7 +1,7 @@
 import {ILayout} from './_Models'
 
 export const DefaultConfig: ILayout = {
-  layoutType: 'dark-header',
+  layoutType: 'dark-sidebar',
   main: {
     componentName: 'main',
     type: 'default',
@@ -38,7 +38,7 @@ export const DefaultConfig: ILayout = {
     },
     sidebar: {
       componentName: 'sidebar',
-      display: false,
+      display: true,
       default: {
         class: 'flex-column',
         push: {
@@ -75,7 +75,7 @@ export const DefaultConfig: ILayout = {
     },
     toolbar: {
       componentName: 'toolbar',
-      display: false,
+      display: true,
       layout: 'classic',
       class: 'py-3 py-lg-6',
       container: 'fluid',
@@ -115,7 +115,7 @@ export const DefaultConfig: ILayout = {
     pageLoader: {
       componentName: 'page-loader',
       type: 'none',
-      logoImage: 'anadolu-sigorta-logo.svg',
+      logoImage: 'default.svg',
       logoClass: 'mh-75px',
     },
   },

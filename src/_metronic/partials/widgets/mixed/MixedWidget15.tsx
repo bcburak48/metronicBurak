@@ -1,7 +1,7 @@
 // @ts-nocheck
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { FC } from "react";
-import { KTIcon } from "../../../helpers";
+import {FC} from 'react'
+import {KTIcon} from '../../../helpers'
 
 type Props = {
   className: string

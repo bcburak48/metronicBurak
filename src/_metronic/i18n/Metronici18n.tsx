@@ -1,10 +1,10 @@
-import React, {createContext, FC, useContext} from 'react'
+import React, {FC, createContext, useContext} from 'react'
 import {WithChildren} from '../helpers'
 
 const I18N_CONFIG_KEY = process.env.REACT_APP_I18N_CONFIG_KEY || 'i18nConfig'
 
 type Props = {
-  selectedLang: 'en'
+  selectedLang: 'de' | 'en' | 'es' | 'fr' | 'ja' | 'zh'
 }
 const initialState: Props = {
   selectedLang: 'en',
@@ -34,9 +34,9 @@ const useLang = () => {
   return useContext(I18nContext).selectedLang
 }
 
-const I18nProvider: FC<WithChildren> = ({children}) => {
+const MetronicI18nProvider: FC<WithChildren> = ({children}) => {
   const lang = getConfig()
   return <I18nContext.Provider value={lang}>{children}</I18nContext.Provider>
 }
 
-export {I18nProvider, useLang}
+export {MetronicI18nProvider, useLang}
